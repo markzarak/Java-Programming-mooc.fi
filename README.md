@@ -1,2 +1,2 @@
-# Java-Programming-mooc.fi
-Object-Oriented Programming with Java from the University of Helsinki's online course
+# Java Programming with mooc.fi
+This repository contains my solutions from the University of Helsinki’s online Java Programming course, avaliable [here](https://java-programming.mooc.fi/)se
