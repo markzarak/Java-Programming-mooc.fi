@@ -1,5 +1,5 @@
 /**
- * Printing Reading input
+ * Reading Input
  * @author: Mark Zarak, Oct 2020
  */
 
