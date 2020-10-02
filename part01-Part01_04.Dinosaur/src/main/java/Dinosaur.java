@@ -1,3 +1,7 @@
+/*
+ * Printing Multiple Lines
+ * @author: Mark Zarak, Oct 2020
+ */
 
 public class Dinosaur {
 
