@@ -12,7 +12,6 @@ public class MessageThreeTimes {
 
         System.out.println("Write a message:");
         String message = scanner.nextLine();
-
         System.out.println(message);
         System.out.println(message);
         System.out.println(message);
