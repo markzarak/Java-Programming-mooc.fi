@@ -1,37 +1,44 @@
+/*
+ * Using Diverse Text
+ * @author: Mark Zarak, Oct 2020
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
- 
+
 public class PersonalDetails {
- 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
- 
-        ArrayList<String> names = new ArrayList<>();
-        ArrayList<Integer> birthYears = new ArrayList<>();
+
+        String longestName = "";
+        int name = 0;
+        double averageAge = 0;
+        int count = 0;
         while (true) {
-            String input = scanner.nextLine();
-            if (input.equals("")) {
+            String userInput = scanner.nextLine();
+            // If user input is empty, then exit
+            if (userInput.equals("")) {
                 break;
             }
- 
-            String[] parts = input.split(",");
-            names.add(parts[0]);
-            birthYears.add(Integer.valueOf(parts[1]));
-        }
-        
-        String longest = names.get(0);
-        for (String name : names) {
-            if(name.length() > longest.length()) {
-                longest = name;
+            // Create an array that holds each value, using comma as the delimiter
+            String[] lines = userInput.split(",");
+            // Convert String to Integer and add to averageAge
+            averageAge += Integer.valueOf(lines[1]);
+            count++;
+            // Find longest name
+            if (lines[0].length() > name) {
+                name = lines[0].length();
+                longestName = lines[0];
             }
         }
-        System.out.println("Longest name: " + longest);
-        
-        int sumOfBirthYears = 0;
-        for (int year : birthYears) {
-            sumOfBirthYears = sumOfBirthYears + year;
+        // If count is greater than 0, calculate average and print result
+        if (count > 0) {
+            averageAge = averageAge / count;
+            System.out.println("Longest name: " + longestName);
+            System.out.println("Average of the birth years: " + averageAge);
+        } else {
+            System.out.println("Error: No input");
         }
-        System.out.println("Average of the birth years: " + 1.0 * sumOfBirthYears / birthYears.size());
- 
     }
 }
