@@ -4,23 +4,23 @@
  */
 
 import java.util.Scanner;
- 
+
 public class LineByLine {
- 
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
- 
+
         while (true) {
-            String input = scanner.nextLine();
-            if (input.equals("")) {
-                break;
-            }
- 
-            String[] parts = input.split(" ");
-            for (String part : parts) {
-                System.out.println(part);
-            }
+        String userInput = scanner.nextLine();
+        // If user input is empty, then exit
+        if (userInput.equals("")) {
+            break;
         }
- 
+        // Create an array that holds each word, using space as the delimiter
+        String[] lines = userInput.split(" ");
+        for (String line : lines) {
+            System.out.println(line);
+        }
+        }
     }
 }
